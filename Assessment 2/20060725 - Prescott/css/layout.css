@@ -1,0 +1,606 @@
+/* COLORS
+----------------------------------------------------------------- */
+/* 
+BACKGROUND - LIGHT GREY         - E3E2E5
+BACKGROUND - PLATINUM           - EAECEC
+BACKGROUND - OFF WHITE          - F5F4F5
+BACKGROUND - VERY PALE YELLOW   - FDF5D8
+BACKGROUND - PALE YELLOW        - F8E48C
+BACKGROUND - YELLOW             - F2D653
+TEXT       - BASICALLY BLACK    - 050505
+TEXT       - DARK SLATE         - 37424A
+LINK       - LIGHTER DARK GREY  - 4E5E6A
+
+/* FONTS
+----------------------------------------------------------------- */
+/* 
+Merriweather Sans
+Yesena One
+Merriweather Italic
+*/
+
+
+/* TEMPLATE STYLESHEET 
+----------------------------------------------------------------- */
+
+/* Additional 
+
+1. 
+2. 
+
+*/
+
+
+
+/* GLOBAL
+----------------------------------------------------------------- */
+    *, *:before, *:after {
+        box-sizing: inherit;
+        }
+
+    html { 
+        Box-sizing: Border-box;
+        font-size: 10px;
+        margin: 0px;
+        padding: 0px;
+    } 
+
+    body {
+        font-family: 'Merriweather Sans', Helvetica, sans-serif;
+        font-size: 100%;
+        line-height: 1.9;
+        background-color: #F5F4F5;
+        color: #1F2428;
+        margin: 0px;
+        padding: 0px;
+        max-width: 100%;
+        word-spacing: 2px;
+    }
+
+    input, textarea {
+        font-family: sans-serif; 
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h1, h2, h3 {
+        font-weight: normal;
+        font-family: 'Yeseva One', 'avenire', Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+        font-size: 6rem;
+        line-height: 3.5rem;
+        margin: 0;
+        padding: 0;
+        color: #F5F4F5;
+    }
+
+    h2 {
+        font-size: 5.5rem;
+        margin: 0;
+        padding: 0;
+        color: #45545E;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+        margin: 0;
+        padding: 0;
+        color: #45545E;
+    }
+
+    @media screen and (min-width: 600px) {
+        h2 {
+            font-size: 7rem;
+        }
+    
+        h3 {
+            font-size: 2.6rem;
+        }
+    }
+
+    p {
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    li {
+        font-size: 1.4rem;
+        margin: 0;
+        padding: 0;
+        list-style: disc;
+    }
+
+    a:link {
+        color: #4E5E6A;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: #414d57;
+    }
+
+    a:focus {
+        border-bottom: 1px solid;
+        background: #FDF5D8;
+    }
+
+    a:hover {
+        border-bottom: 1px solid;     
+        background: #FDF5D8;
+    }
+
+    a:active {
+        background: #4E5E6A;
+        color: #F2D653;
+    }
+
+
+
+    /* ----- Main Container Styles ----- */
+    .container-content {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 100px 15px 100px 15px;
+    }
+
+
+
+/* NAV
+----------------------------------------------------------------- */
+    /* ----- Mobile First Size - FLEXBOX ----- */
+    .page-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        border-top: 1px solid #050505;
+        border-right: 1px solid #050505;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .page-nav li {
+        flex: 1 1 50%;
+        display: flex;
+        border-bottom: 1px solid #050505;
+        border-left: 1px solid #050505;
+        background-color: #EAECEC;
+        font-size: 1.6rem;    
+        font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .page-nav a {
+        padding: 15px 10px;
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        flex: 1 1 auto;
+        transition: all 0.3s ease;
+    }
+
+
+
+    /* ----- Link Styles ----- */
+    .page-nav a:link {
+        color: #37424A;
+        text-decoration: none;
+    }
+
+    .page-nav a:visited {
+        color: #37424A;
+        text-decoration: none;
+    }
+
+    .page-nav a:hover {
+        background: #F8E48C;
+        color: #37424A;
+    }
+
+    .page-nav a:active {
+        background: #F2D653;
+        color: #37424A;
+    }
+
+    /* ----- larger Screen Styles ----- */
+    @media screen and (min-width: 700px) {
+        .page-nav ul {
+        flex-wrap: nowrap;
+        box-shadow:0 0 20px #1F2428 ;
+        position: fixed;
+        }
+        .page-nav li {
+        flex: 1 1 25%;
+        border-bottom: none;
+        }
+    }
+
+
+/* HEADER
+----------------------------------------------------------------- */
+    .header-content {
+        max-width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+
+
+    /* ----- Hero Image Styles ----- */
+    .page-header {
+        background-color: #37424A;
+        display: flex;
+        min-height: 60vh;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../images/my_hero_FINAL.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: soft-light;
+    }
+
+
+
+    /* ----- Title Styles ----- */
+    .header-content h1 {
+        font-size: 5.5rem;
+        margin-bottom: .5rem;
+        line-height: 1;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+    /* ----- Slogan Styles ----- */
+    .header-content p {
+        font-size: 1.8rem;
+        color: #F2D653;
+        font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+        font-weight: bold; 
+    }
+
+
+
+/* ABOUT ME
+----------------------------------------------------------------- */
+    .about-me {
+        background-color: #E3E2E5;
+    }
+
+    .about-me p {
+        padding-bottom: 20px;
+    }
+
+/* TOPIC SECTION
+----------------------------------------------------------------- */
+    .work-experience .container-content {
+        padding: 100px 10px 100px 10px;
+    }
+
+    .work-experience {
+        background-color: #F8E48C;
+    }
+
+    /* ----- BGP header - less height for mobile ----- */
+    .bgp-h2 {
+        line-height: 70px;
+        padding-bottom: 20px;
+    }
+
+
+
+    /* ---- Second P for BGP - More seperation from above ----- */
+    .bgp-p-2 {
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+
+
+    /* ----- Lilly Hedaer - More Seperation from above ----- */
+    .lilly-header {
+        padding-top: 40px;
+    }
+
+
+
+    /* ----- Lilly Button Instructions - spacing below ----- */
+    .lilly-button-p {
+        padding: 20px 0px 20px 0px;
+    }
+
+
+
+    .lilly-switch #make-something-happen {
+        min-width:0;
+        background-color: #D2B2B7;
+        border: 0;
+        border-radius: 0.3em;
+        padding: 13px 30px;
+        margin-top: 10px;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #37424A;
+        font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+    }
+
+
+/* IMAGE GALLERY
+------------------------------------------------------------------ */
+    /* ----- Mobile First Size Styles ----- */
+    .image-gallery {
+        background-color: #F5F4F5;
+    }
+
+    .image-gallery .container-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .image-gallery h2 {
+        text-align: center;
+        line-height: 1.2;
+        padding-bottom: 30px;
+    }
+
+    .image-gallery .an-image {
+        margin: 0;
+    }
+
+    .image-gallery .image-caption {
+        padding-bottom: 100px;
+    }
+
+    /* ----- Larger Screen Size Styles - FLEXBOX ----- */
+    @media screen and (min-width: 650px) {
+        .image-gallery .image-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .image-gallery .an-image {
+            flex: 1 1 40%;
+            padding: 10px;
+            background: #E3E2E5;
+            margin: 10px 10px 10px 10px
+        }
+        .image-gallery .image-caption {
+            padding-bottom: 0px;
+        }
+    }
+
+
+
+    /* ----- Larger Screen Styles - FLEXBOX ----- */
+    @media screen and (min-width: 1000px) {
+        .image-gallery .image-container {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .image-gallery .an-image {
+            flex: 33%;
+            padding: 10px;
+            background: #E3E2E5;
+        }
+        .image-gallery .an-image+.an-image {
+            margin-left: 20px;
+        }
+        .image-gallery .image-caption {
+        padding-bottom: 0px;
+        }
+    }
+
+
+
+/* CONTACT SECTION
+----------------------------------------------------------------- */
+    .contact-me {
+        background-color: #F2D653;
+    }
+
+    .contact-me h2 {
+        line-height: 1.2;
+    }
+
+    /* ----- Label Title Styles - 'Your Name', 'Your Phone Number ---- */
+    form label {
+        display: block;
+        padding-bottom: 0.2em;
+        padding-top: 1em;
+        font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+    }
+
+
+
+    /* ----- Label Input Styles - Input feilds and text style ----- */
+    form input, form textarea {
+        padding: 0.4em 0.4em;
+        font-size: 1.1em;
+        border: 1px solid #bbb; 
+        border-radius: 0.3em;
+        min-width: 100%;
+        max-width: 100%;
+        font-family: 'Merriweather Sans', Helvetica, sans-serif;
+    }
+
+
+
+    /* ----- Submit Button Styles ---- */
+    form input[type="submit"] {
+        min-width:0;
+        background-color: #4E5E6A;
+        border: 0;
+        border-radius: 0.3em;
+        padding: 13px 30px;
+        margin-top: 10px;
+        font-size: 1em;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #F5F4F5;
+        transition: background-color 0.3s ease;
+        font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+    }
+
+    form input[type="submit"]:hover {
+        background-color: #37424A;
+    }
+
+
+
+    /* ----- Social Media Icons ----- */
+    .contact-me .icon-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding: 10px 0px 0px 0px;
+        margin: 0px;
+    }
+
+    .contact-me .icons {
+        padding: 15px 15px 5px 5px;
+        margin: 0px;
+        color: white;
+    }
+
+    .contact-me img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .contact-me a:hover {
+        background: none;
+        border-bottom: none;
+    }
+
+    .contact-me a:active {
+        background: none;
+    }
+
+/* FOOTER
+----------------------------------------------------------------- */
+    .page-footer {
+        background: #EAECEC;
+        color: #050505;
+        display: flex;
+        height: 10vh;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+    }
+
+
+
+    /* ----- Link Style ----- */
+    footer a:link {
+        color: #4E5E6A;
+        text-decoration: none;
+    }
+
+    footer a:visited {
+        color: #414d57;
+    }
+
+    footer a:focus {
+        border-bottom: 1px solid;
+        background: #FDF5D8;
+    }
+
+    footer a:hover {
+        border-bottom: 1px solid;     
+        background: #FDF5D8;
+    }
+
+    footer a:active {
+        background: #F2D653;
+        color: #FDF5D8;
+    }
+
+
+
+
+/* JAVA - People can choose there fav dog on color
+----------------------------------------------------------------- */
+    /* ----- GLOBAL ----- */
+    .js-modify-page a:link {
+        color: #37424A;
+        text-decoration: none;
+    }
+
+    .js-modify-page a:visited {
+        color: #37424A;
+        text-decoration: none;
+    }
+
+    .js-modify-page a:hover {
+        background: #BB8B93;
+    }
+
+    .js-modify-page a:active {
+        background: #D2B2B7;
+    }
+
+
+    /* ----- NAV ----- */
+    .js-modify-page .page-nav a:link {
+            color: #37424A;
+            text-decoration: none;
+    }
+
+    .js-modify-page .page-nav a:visited {
+        color: #37424A;
+        text-decoration: none;
+    }
+
+    .js-modify-page .page-nav a:hover {
+        background: #D2B2B7;
+    }
+
+    .js-modify-page .page-nav a:active {
+        background: #BB8B93;
+    }
+
+
+
+    /* ----- HEADER ----- */
+    .js-modify-page .header-content p { 
+        color: #BB8B93;
+    }
+
+
+
+    /* ----- TOPIC ----- */
+    .js-modify-page .work-experience { 
+        background-color: #D2B2B7;
+    }
+
+    .js-modify-page #make-something-happen {
+        min-width:0;
+        background-color: #F8E48C;
+        border: 0;
+        border-radius: 0.3em;
+        padding: 13px 30px;
+        margin-top: 10px;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #37424A;
+        font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+    }
+
+
+    /* ----- CONTACT ME ----- */
+    .js-modify-page .contact-me {
+        background-color: #CAA5AB;
+    }
