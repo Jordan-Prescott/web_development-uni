@@ -25,8 +25,21 @@ Merriweather Italic
 
 /* Additional 
 
-1. 
-2. 
+1. Additional media query for h2 and h3 to have a bigger size on bigger screens. 
+2. Fixed NAV screen for bigger screens only.
+3. Additional media with flexbox in a different style for medium size screens like ipads.
+4. New code for Contact Me both HTML and CSS and additional styling.
+5. Additional media query for the Contact Me so this more comfortable for both small and bigger screens.
+6. JAVA button styling when clicked all elements change to purple brown such as the NAV, links and slogan on header.
+
+Find Addtional (Below are sections assigned by comments)
+
+1. GLOBAL
+2. NAV
+3. IMAGE GALLERY
+4. CONTACT ME 
+5. CONATCT ME 
+6. JAVA
 
 */
 
@@ -50,7 +63,7 @@ Merriweather Italic
         font-size: 100%;
         line-height: 1.9;
         background-color: #F5F4F5;
-        color: #1F2428;
+        color: #050505;
         margin: 0px;
         padding: 0px;
         max-width: 100%;
@@ -93,6 +106,9 @@ Merriweather Italic
         color: #45545E;
     }
 
+
+
+    /* ----- Main Header Styles - Bigger headers for bigger screens ----- */
     @media screen and (min-width: 600px) {
         h2 {
             font-size: 7rem;
@@ -138,7 +154,7 @@ Merriweather Italic
 
     a:active {
         background: #4E5E6A;
-        color: #F2D653;
+        color: #F8E48C;
     }
 
 
@@ -212,6 +228,8 @@ Merriweather Italic
         color: #37424A;
     }
 
+
+
     /* ----- larger Screen Styles ----- */
     @media screen and (min-width: 700px) {
         .page-nav ul {
@@ -224,6 +242,7 @@ Merriweather Italic
         border-bottom: none;
         }
     }
+
 
 
 /* HEADER
@@ -282,15 +301,19 @@ Merriweather Italic
         padding-bottom: 20px;
     }
 
+
+
 /* TOPIC SECTION
 ----------------------------------------------------------------- */
     .work-experience .container-content {
-        padding: 100px 10px 100px 10px;
+        padding: 100px 10px;
     }
 
     .work-experience {
         background-color: #F8E48C;
     }
+
+
 
     /* ----- BGP header - less height for mobile ----- */
     .bgp-h2 {
@@ -315,14 +338,15 @@ Merriweather Italic
 
 
 
-    /* ----- Lilly Button Instructions - spacing below ----- */
-    .lilly-button-p {
-        padding: 20px 0px 20px 0px;
+    /* ----- Fav Dog Button Instructions - spacing below ----- */
+    .fav-button-para {
+        padding: 20px 0px;
     }
 
 
 
-    .lilly-switch #make-something-happen {
+    /* ----- Fav Dog Button Styles ----- */
+    .fav-button #make-something-happen {
         min-width:0;
         background-color: #D2B2B7;
         border: 0;
@@ -373,7 +397,7 @@ Merriweather Italic
             flex: 1 1 40%;
             padding: 10px;
             background: #E3E2E5;
-            margin: 10px 10px 10px 10px
+            margin: 10px;
         }
         .image-gallery .image-caption {
             padding-bottom: 0px;
@@ -397,7 +421,7 @@ Merriweather Italic
             margin-left: 20px;
         }
         .image-gallery .image-caption {
-        padding-bottom: 0px;
+            padding-bottom: 0px;
         }
     }
 
@@ -413,26 +437,59 @@ Merriweather Italic
         line-height: 1.2;
     }
 
+    /* ----- Form Styles - breathing space from contact header ----- */
+    form {
+        padding-top: 50px;
+    }
+
+
+
     /* ----- Label Title Styles - 'Your Name', 'Your Phone Number ---- */
     form label {
-        display: block;
-        padding-bottom: 0.2em;
-        padding-top: 1em;
+        display: inline-block;
+        padding: 12px 12px 12px 0;
         font-family: 'Merriweather', Arial, Helvetica, sans-serif;
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
 
 
     /* ----- Label Input Styles - Input feilds and text style ----- */
     form input, form textarea {
-        padding: 0.4em 0.4em;
-        font-size: 1.1em;
+        padding: 12px;
+        font-size: 1.2em;
         border: 1px solid #bbb; 
         border-radius: 0.3em;
         min-width: 100%;
         max-width: 100%;
         font-family: 'Merriweather Sans', Helvetica, sans-serif;
+        resize: vertical;
+    }
+
+    /* ----- Adapted from: https://www.w3schools.com/css/css_form.asp [Accessed on 6th December 2020] ----- */
+    .label-title {
+        float: left;
+        width: 25%;
+        margin-top: 6px;
+      }
+
+    .label-input {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+      }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+    @media screen and (max-width: 600px) {
+    .label-title, .label-input, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+     }
     }
 
 
@@ -451,42 +508,13 @@ Merriweather Italic
         color: #F5F4F5;
         transition: background-color 0.3s ease;
         font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+        float: right;
     }
 
     form input[type="submit"]:hover {
         background-color: #37424A;
     }
 
-
-
-    /* ----- Social Media Icons ----- */
-    .contact-me .icon-container {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        padding: 10px 0px 0px 0px;
-        margin: 0px;
-    }
-
-    .contact-me .icons {
-        padding: 15px 15px 5px 5px;
-        margin: 0px;
-        color: white;
-    }
-
-    .contact-me img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .contact-me a:hover {
-        background: none;
-        border-bottom: none;
-    }
-
-    .contact-me a:active {
-        background: none;
-    }
 
 /* FOOTER
 ----------------------------------------------------------------- */
@@ -532,6 +560,19 @@ Merriweather Italic
 
 /* JAVA - People can choose there fav dog on color
 ----------------------------------------------------------------- */
+/* COLORS
+----------------------------------------------------------------- */
+/* 
+BACKGROUND - LIGHT GREY         - E3E2E5
+BACKGROUND - PLATINUM           - EAECEC
+BACKGROUND - OFF WHITE          - F5F4F5
+BACKGROUND - PALE PINK          - D2B2B7
+BACKGROUND - DARKER PINK        - CAA5AB
+TEXT       - DARK SLATE         - 37424A
+BODY TEXT  - BLACK              - 050505
+LINK       - LIGHT DARK GREY    - 556172
+
+
     /* ----- GLOBAL ----- */
     .js-modify-page a:link {
         color: #37424A;
@@ -544,11 +585,12 @@ Merriweather Italic
     }
 
     .js-modify-page a:hover {
-        background: #BB8B93;
+        background: #f1e0e2;
     }
 
     .js-modify-page a:active {
-        background: #D2B2B7;
+        background: #37424A;
+        color: #D2B2B7
     }
 
 

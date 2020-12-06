@@ -1,13 +1,14 @@
-// OPEN THE CONSOLE BELOW TO SEE THE JAVASCRIPT RUNNING
+  // MESSAGE BASED ON TIME TO EMAIL.
+  // --------------------------------------------------------------------------
 
-// find out what time it is
+  // The code here finds out what time it is
 
 var currenttime = new Date();
 var currenthour = currenttime.getHours();
 
 console.log(currenthour);
 
-// do a conditional
+  // Below creates and adds code to the HTML
 
 var emailmessage = "You are <strong>OK</strong> to email me now";
 
@@ -22,27 +23,31 @@ getheading.insertAdjacentHTML(
   '<p class="js-message">' + emailmessage + "</p>"
 );
 
-//---------------------------------------------------------------------------
 
-// The code creates a button which when clicked adds or removes a class called 'js-modify-page' to the <html> tag, allowing you to style your page differently when the button is 'off' or 'on'.
 
-// This code creates a button which when clicked adds style or removes it. This allows you to style differently when off or on.
+
+
+  // ADDS CSS CLASS FOR DIFFERENT STYLES
+  // --------------------------------------------------------------------------
+
+  // The code creates a button which when clicked adds or removes a class called 'js-modify-page' to the <html> tag, allowing you to style your page differently when the button is 'off' or 'on'.
+
+  // This code creates a button which when clicked adds style or removes it. This allows you to style differently when off or on.
 
 var findLocation = document.getElementById("switch");
 
-// Creates a button
+  // Creates a button
 
 var button = document.createElement("button");
 button.setAttribute("class", "lilly-switch"); 
 button.setAttribute("id", "make-something-happen"); 
 button.textContent = "Dog Colour"; 
 
-
-// Add the button to the HTML
+  // Add the button to the HTML
 
 findLocation.append(button);
 
-// point JavaScript at the button created
+  // point JavaScript at the button created
 
 var listenForInteraction = document.getElementById("make-something-happen");
 
