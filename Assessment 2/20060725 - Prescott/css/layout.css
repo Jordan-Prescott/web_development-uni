@@ -27,19 +27,9 @@ Merriweather Italic
 
 1. Additional media query for h2 and h3 to have a bigger size on bigger screens. 
 2. Fixed NAV screen for bigger screens only.
-3. Additional media with flexbox in a different style for medium size screens like ipads.
-4. New code for Contact Me both HTML and CSS and additional styling.
-5. Additional media query for the Contact Me so this more comfortable for both small and bigger screens.
-6. JAVA button styling when clicked all elements change to purple brown such as the NAV, links and slogan on header.
-
-Find Addtional (Below are sections assigned by comments)
-
-1. GLOBAL
-2. NAV
-3. IMAGE GALLERY
-4. CONTACT ME 
-5. CONATCT ME 
-6. JAVA
+3. Additional image with additonal media query and flex box for medium screen sizes lilke iPad and make this smoother moving from small to large screens.
+4. Additional media query for the Contact Me so this more comfortable for both small and bigger screens.
+5. JAVA button styling when clicked all elements change to purple brown such as the NAV, links and slogan on header.
 
 */
 
@@ -350,7 +340,7 @@ Find Addtional (Below are sections assigned by comments)
         min-width:0;
         background-color: #D2B2B7;
         border: 0;
-        border-radius: 0.3em;
+        border-radius: 0.2em;
         padding: 13px 30px;
         margin-top: 10px;
         font-size: 1.3em;
@@ -439,57 +429,31 @@ Find Addtional (Below are sections assigned by comments)
 
     /* ----- Form Styles - breathing space from contact header ----- */
     form {
-        padding-top: 50px;
+        padding-top: 30px;
     }
 
 
 
     /* ----- Label Title Styles - 'Your Name', 'Your Phone Number ---- */
     form label {
-        display: inline-block;
-        padding: 12px 12px 12px 0;
+        display: block;
+        padding-bottom: 0.1em;
+        padding-top: 1em;
         font-family: 'Merriweather', Arial, Helvetica, sans-serif;
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
 
 
 
     /* ----- Label Input Styles - Input feilds and text style ----- */
     form input, form textarea {
-        padding: 12px;
+        padding: 0.4em 0.3em;
         font-size: 1.2em;
         border: 1px solid #bbb; 
-        border-radius: 0.3em;
+        border-radius: 0.2em;
         min-width: 100%;
         max-width: 100%;
         font-family: 'Merriweather Sans', Helvetica, sans-serif;
-        resize: vertical;
-    }
-
-    /* ----- Adapted from: https://www.w3schools.com/css/css_form.asp [Accessed on 6th December 2020] ----- */
-    .label-title {
-        float: left;
-        width: 25%;
-        margin-top: 6px;
-      }
-
-    .label-input {
-        float: left;
-        width: 75%;
-        margin-top: 6px;
-      }
-
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-
-    @media screen and (max-width: 600px) {
-    .label-title, .label-input, input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-     }
     }
 
 
@@ -499,7 +463,7 @@ Find Addtional (Below are sections assigned by comments)
         min-width:0;
         background-color: #4E5E6A;
         border: 0;
-        border-radius: 0.3em;
+        border-radius: 0.2em;
         padding: 13px 30px;
         margin-top: 10px;
         font-size: 1em;
@@ -508,11 +472,18 @@ Find Addtional (Below are sections assigned by comments)
         color: #F5F4F5;
         transition: background-color 0.3s ease;
         font-family: 'Merriweather', Arial, Helvetica, sans-serif;
-        float: right;
     }
 
     form input[type="submit"]:hover {
         background-color: #37424A;
+    }
+
+    /* ----- Submit Button Less than 600px - Makes the button full width for ease on smaller screens ----- */
+    @media screen and (max-width: 600px) {
+        input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+     }
     }
 
 
