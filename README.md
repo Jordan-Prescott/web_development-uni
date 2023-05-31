@@ -14,4 +14,4 @@ Overall, the website celebrated the joy that Bella and Lilly bring into my life 
 ![Image Gallery](./media/image_gallery.png "Image Gallery")
 
 ### Contact Form
-![Contact Form](./media/contact_me_form "Contact Form")
+![Contact Form](./media/contact_me_form.png "Contact Form")
